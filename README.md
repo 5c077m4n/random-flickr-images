@@ -1,27 +1,26 @@
-# RandomFlickrImages
+# Build an Angular2 application as follows:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
 
-## Development server
+- Show a random Flickr image at the center of the screen.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Images should be obtained from the Flickr public RSS feed.
 
-## Code scaffolding
+- Image should be presented along with its title, description and date taken.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- A button will allow the user to refresh and get a new image.
 
-## Build
+- If button is not pressed the image refreshes by itself every 5 seconds.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- The same image may not be displayed twice.
 
-## Running unit tests
+- Assignment should be committed to github
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Work will be evaluated based on the following:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+1. Angular2 application structure (components, services, etc.)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2. Code quality
+
+3. Aesthetics
