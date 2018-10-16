@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppStylesModule } from './app-styles.module';
@@ -17,9 +18,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 	imports: [
 		BrowserModule,
 		HttpClientModule,
+		HttpClientJsonpModule,
 		AppRoutingModule,
 		AppStylesModule,
 		BrowserAnimationsModule,
+		FlexLayoutModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]

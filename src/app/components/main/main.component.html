@@ -1,3 +1,30 @@
-<p>
-  main works!
-</p>
+<main *ngIf="feed; else loading;"
+	fxLayout="row wrap" fxLayoutAlign="center start">
+	<mat-card fxLayout="column" fxLayoutAlign="start center" fxFlex>
+		<mat-card-header>
+			<mat-card-title>
+				<a mat-button [href]="feed[randInd].link" target="_blank">
+					{{(feed[randInd].title.legth)? feed[randInd].title : 'Untitled'}}
+				</a>
+			</mat-card-title>
+			<mat-card-subtitle>
+				<p>by: {{feed[randInd].author}}</p>
+			</mat-card-subtitle>
+			<img mat-card-avatar [src]="feed[randInd].media.m" />
+		</mat-card-header>
+		<img mat-card-image [src]="feed[randInd].media.m" />
+	</mat-card>
+	<mat-card fxFlex>
+		<mat-card-actions>
+			<button mat-button (click)="refreshImage();" fxFill>Refresh Image</button>
+		</mat-card-actions>
+		<mat-card-content>
+			<p>{{feed[randInd].description}}</p>
+		</mat-card-content>
+	</mat-card>
+</main>
+
+<ng-template #loading>
+	<p>Please wait for the API to respond...</p>
+</ng-template>
+{{detectRender}}

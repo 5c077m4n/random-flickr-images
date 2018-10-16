@@ -1,0 +1,4 @@
+mat-card-footer > p {
+	padding: 10px;
+	overflow: scroll;
+}
