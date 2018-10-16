@@ -1,7 +1,6 @@
 <main *ngIf="feed && feed[randInd]; else loading;"
-	fxLayout="row" fxLayoutAlign.xs="column" fxLayoutAlign="center start"
-	fxLayoutGap="5px">
-	<mat-card fxLayout="column" fxLayoutAlign="start center" fxFlex>
+	fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px">
+	<mat-card fxFlex>
 		<mat-card-header>
 			<mat-card-title>
 				<a mat-raised-button [href]="feed[randInd].link" target="_blank" fxFill>
