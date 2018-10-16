@@ -8,7 +8,8 @@
 				</a>
 			</mat-card-title>
 			<mat-card-subtitle>
-				<p>by: {{feed[randInd].author}}</p>
+				<p><strong>By:</strong> {{feed[randInd].author}}</p>
+				<p><strong>Created At:</strong> {{feed[randInd].date_taken}}</p>
 			</mat-card-subtitle>
 			<img mat-card-avatar [src]="feed[randInd].media.m" />
 		</mat-card-header>
@@ -19,7 +20,9 @@
 			<button mat-raised-button (click)="refreshImage();" fxFill>Refresh Image</button>
 		</mat-card-actions>
 		<mat-card-content>
-			<p class="padded scroll">{{feed[randInd].description}}</p>
+			<p class="padded scroll">
+				<strong>Description:</strong> {{feed[randInd].description}}
+			</p>
 		</mat-card-content>
 	</mat-card>
 </main>
