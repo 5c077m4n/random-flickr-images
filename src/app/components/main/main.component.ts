@@ -30,9 +30,8 @@ export class MainComponent implements OnInit, OnDestroy {
 	public get image$(): Observable<any> {
 		const source$ = this.flickr.getImageFeed()
 			.pipe(
-				tap(console.log),
 				map((resp: FlickrResponse) => resp.items),
-				tap(feedArr => this.feed = feedArr),
+				tap((feedArr: FeedItem[]) => this.feed = feedArr),
 				tap(feedArr => this.randInd = this.randomInteger(0, feedArr.length)),
 				tap(_ => this.cdr.detectChanges()),
 			);
@@ -43,7 +42,6 @@ export class MainComponent implements OnInit, OnDestroy {
 			);
 	}
 
-	public get detectRender(): void { console.log('rendered page.'); return; }
 	public refreshImage(): void {
 		this.randInd = this.randomInteger(0, this.feed.length);
 	}
